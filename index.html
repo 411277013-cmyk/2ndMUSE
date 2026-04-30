@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2andmuse - 穿搭靈感市集</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-banner">
+    <div class="banner-track">
+      <span>★ 2ndMUSE 品牌價值延續</span>
+      <span>★ 支持再交 · 永續循環</span>
+      <span>★ 讓買不了全新的人也能擁有好品味</span>
+      <span>★ 精品穿搭、經典單品</span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="brand">2ndMUSE</div>
+    </div>
+    <div class="search-group">
+      <input id="searchInput" type="search" placeholder="搜尋經典單品..." />
+      <button id="searchButton">搜尋</button>
+    </div>
+    <div class="top-actions">
+      <button id="openCart" class="cart-btn">購物袋 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">分類</div>
+      <button class="category-btn active" data-cat="all" data-icon="⛶">全部</button>
+      <button class="category-btn" data-cat="上衣" data-icon="👚">上衣</button>
+      <button class="category-btn" data-cat="褲子" data-icon="👖">褲子</button>
+      <button class="category-btn" data-cat="裙子" data-icon="👗">裙子</button>
+      <button class="category-btn" data-cat="鞋子" data-icon="👟">鞋子</button>
+      <button class="category-btn" data-cat="包包" data-icon="👜">包包</button>
+      <button class="category-btn" data-cat="外套" data-icon="🧥">外套</button>
+      <button class="category-btn" data-cat="飾品" data-icon="💍">飾品</button>
+      <button class="category-btn" data-cat="帽子" data-icon="🎩">帽子</button>
+      <button class="category-btn" data-cat="小配件" data-icon="📿">小配件</button>
+    </aside>
+
+    <main class="content">
+      <section class="section-header">
+        <div>
+          <h1>2andmuse</h1>
+          <p>黑白灰時尚穿搭靈感與二手精品交易平台</p>
+        </div>
+        <div class="stats">
+          <span>收藏 <strong id="favCount">0</strong></span>
+          <span>商品 <strong id="productCount">0</strong></span>
+        </div>
+      </section>
+      <div class="mode-banner" id="modeBanner">目前模式：瀏覽商品</div>
+
+      <section class="inspo-wall">
+        <div class="inspo-header">
+          <div>
+            <h2>穿搭靈感牆</h2>
+            <p>上傳你的靈感圖片，隨時刪除不需要的作品。</p>
+          </div>
+          <div class="inspo-actions">
+            <input id="inspImage" type="file" accept="image/*" />
+            <button id="uploadInspo">上傳圖片</button>
+          </div>
+        </div>
+        <div class="inspo-grid" id="inspoGrid"></div>
+      </section>
+
+      <section class="product-grid" id="productGrid"></section>
+
+      <section class="favorite-panel">
+        <div class="panel-header">
+          <h2>我的收藏</h2>
+          <p>已標記的心願單商品會保留在這裡</p>
+        </div>
+        <div class="favorite-grid" id="favoriteGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="sellModal">
+    <div class="modal-card">
+      <button class="close-btn" data-close>×</button>
+      <h2>刊登新品</h2>
+      <div class="form-row">
+        <label>商品名稱</label>
+        <input id="sellTitle" type="text" placeholder="輸入商品名稱" />
+      </div>
+      <div class="form-row">
+        <label>價格 (NT$)</label>
+        <input id="sellPrice" type="number" placeholder="輸入售價" />
+      </div>
+      <div class="form-row">
+        <label>分類</label>
+        <select id="sellCategory">
+          <option value="上衣">上衣</option>
+          <option value="褲子">褲子</option>
+          <option value="裙子">裙子</option>
+          <option value="鞋子">鞋子</option>
+          <option value="包包">包包</option>
+          <option value="外套">外套</option>
+          <option value="飾品">飾品</option>
+          <option value="帽子">帽子</option>
+          <option value="小配件">小配件</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>商品圖片</label>
+        <input id="sellImage" type="file" accept="image/*" />
+      </div>
+      <div class="modal-actions">
+        <button id="confirmSell">確定刊登</button>
+        <button class="secondary" data-close>取消</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="cartModal">
+    <div class="modal-card">
+      <button class="close-btn" data-close>×</button>
+      <h2>購物袋</h2>
+      <div id="cartList" class="cart-list"></div>
+      <div class="cart-footer">
+        <span>總計</span>
+        <strong id="cartTotal">NT$0</strong>
+      </div>
+      <button id="checkoutButton">結帳</button>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn active" id="homeNav">
+      <span>🏠</span>
+      <small>HOME</small>
+    </button>
+    <button class="nav-btn" id="editNav">
+      <span>✎</span>
+      <small>EDIT</small>
+    </button>
+    <button class="nav-btn sell-nav" id="openSell">
+      <span>＋</span>
+      <small>SELL</small>
+    </button>
+    <button class="nav-btn" id="deleteNav">
+      <span>🗑</span>
+      <small>DELETE</small>
+    </button>
+    <button class="nav-btn" id="accountNav">
+      <span>👤</span>
+      <small>ACCOUNT</small>
+    </button>
+  </nav>
+
+  <div class="modal" id="accountModal">
+    <div class="modal-card">
+      <button class="close-btn" data-close>×</button>
+      <h2>會員中心</h2>
+      <div class="account-summary" id="accountSummary"></div>
+      <div class="account-section">
+        <h3>我的收藏</h3>
+        <div id="accountFavorites" class="account-grid"></div>
+      </div>
+      <div class="account-section">
+        <h3>購物清單</h3>
+        <div id="accountCartList" class="account-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
