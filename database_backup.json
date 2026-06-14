@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": 1781364775459,
+      "title": "黑色長袖上衣",
+      "price": 200,
+      "category": "上衣",
+      "imageUrl": "/uploads/1781364775455.jpg"
+    },
+    {
+      "id": 1781364984468,
+      "title": "白色長袖掛博造型上衣",
+      "price": 230,
+      "category": "上衣",
+      "imageUrl": "/uploads/1781364984463.jpg"
+    },
+    {
+      "id": 1781365026697,
+      "title": "墨綠色短袖刺繡T",
+      "price": 150,
+      "category": "上衣",
+      "imageUrl": "/uploads/1781365026691.jpg"
+    },
+    {
+      "id": 1781365057310,
+      "title": "星星造型深藍色短袖合身T",
+      "price": 180,
+      "category": "上衣",
+      "imageUrl": "/uploads/1781365057306.jpg"
+    },
+    {
+      "id": 1781365097051,
+      "title": "透膚高領長袖內搭上衣",
+      "price": 210,
+      "category": "上衣",
+      "imageUrl": "/uploads/1781365097047.jpg"
+    },
+    {
+      "id": 1781365151616,
+      "title": "咖啡撞色造型上衣",
+      "price": 230,
+      "category": "上衣",
+      "imageUrl": "/uploads/1781365151612.jpg"
+    },
+    {
+      "id": 1781365917596,
+      "title": "咖啡色長靴",
+      "price": 360,
+      "category": "鞋子",
+      "imageUrl": "/uploads/1781365917587.jpg"
+    },
+    {
+      "id": 1781366002707,
+      "title": "咖啡色包包",
+      "price": 240,
+      "category": "包包",
+      "imageUrl": "/uploads/1781366002702.jpg"
+    }
+  ],
+  "inspirations": [
+    {
+      "id": 1781360105347,
+      "imageUrl": "/uploads/1781360105343.jpg"
+    },
+    {
+      "id": 1781360111836,
+      "imageUrl": "/uploads/1781360111827.jpg"
+    },
+    {
+      "id": 1781360121106,
+      "imageUrl": "/uploads/1781360121100.jpg"
+    },
+    {
+      "id": 1781360132529,
+      "imageUrl": "/uploads/1781360132525.jpg"
+    },
+    {
+      "id": 1781360164020,
+      "imageUrl": "/uploads/1781360164017.jpg"
+    },
+    {
+      "id": 1781360194980,
+      "imageUrl": "/uploads/1781360194968.jpg"
+    },
+    {
+      "id": 1781360219598,
+      "imageUrl": "/uploads/1781360219589.jpg"
+    },
+    {
+      "id": 1781360317444,
+      "imageUrl": "/uploads/1781360317427.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "id": "MUSE-178136483717575",
+      "title": "黑色長袖上衣",
+      "price": 200,
+      "buyer": "5555",
+      "status": "處理中 (Pending)",
+      "time": "下午11:33:57"
+    }
+  ]
+}
